@@ -1,4 +1,5 @@
 (function (root, factory) {
+
 	if (typeof define === 'function' && define.amd) {
 		define(function(){
 			return factory();
@@ -8,28 +9,37 @@
 	} else {
 		root.entityconvert = factory();
 	}
+
 }(this, function(){
+
+	function eachChar(str, fn){
+		str = str.split('');
+		for (var i = 0, len = str.length; i < len; i++){
+			str[i] = fn(str[i]);
+		}
+		return str.join('');
+	}
 
 	function replacer(mode){
 
-		function ent(code){
-			return (mode === 'css' ? ['\\00', code.toString(16)] : ['&#', code, ';']).join('');
+		function getEnt(code){
+			return (
+				mode === 'css' ?
+				['\\00', code.toString(16)] :
+				['&#', code, ';']
+			).join('');
 		}
 
 		return function(character){
 			var index = character.charCodeAt(0);
-			return (index > 127) ? ent(index) : character;
+			return (index > 127) ? getEnt(index) : character;
 		};
+
 	}
 
 	function replaceBy(mode){
 		return function(string){
-			var fn = replacer(mode);
-			string = string.split('');
-			for (var i = 0, len = string.length; i < len; i++){
-				string[i] = fn(string[i]);
-			}
-			return string.join('');
+			return eachChar(string, replacer(mode));
 		};
 	}
 

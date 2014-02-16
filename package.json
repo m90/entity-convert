@@ -1,11 +1,11 @@
 {
   "name": "entity-convert",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "convert all special characters in a string to their corresponding HTML and CSS entities",
   "main": "entityconvert.js",
   "repository": "https://github.com/m90/entity-convert.git",
   "homepage": "https://github.com/m90/entity-convert",
-  "issues": "https://github.com/m90/entity-convert/issues",
+  "bugs": "https://github.com/m90/entity-convert/issues",
   "keywords": [
     "string",
     "entities",
