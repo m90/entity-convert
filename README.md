@@ -5,7 +5,7 @@ The module works as AMD or CommonJS module and exports an Object containing to f
 
 AMD usage like:
 ```javascript
-require(['entities'], function(entityconvert){
+require(['entityconvert'], function(entityconvert){
 	var converted = entityconvert.html('We äll löve Ümläutß!');
 	// => We &#228;ll l&#246;ve &#220;ml&#228;ut&#223;!
 });
