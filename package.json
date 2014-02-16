@@ -1,0 +1,15 @@
+{
+  "name": "entity-convert",
+  "version": "0.0.0",
+  "description": "convert all special characters in a string to their corresponding HTML and CSS entities",
+  "main": "entityconvert.js",
+  "repository": "https://github.com/m90/entity-convert.git",
+  "keywords": [
+    "string",
+    "entities",
+    "html",
+    "css"
+  ],
+  "author": "Frederik Ring",
+  "license": "MIT"
+}
