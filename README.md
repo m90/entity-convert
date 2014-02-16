@@ -1,7 +1,7 @@
 # entityconvert.js
 #### convert special characters in a string to their HTML or CSS charcode entities (useful for build tools et. al.)
 
-The module works as AMD or CommonJS module and exports an Object containing two functions: `.html(str)` and `.css(str)`. In a non-AMD or CommonJS environment `window.entityconvert` will be exported.
+The module works as AMD or CommonJS module and exports an Object containing two functions: `.html(str)` and `.css(str)`. In a non-AMD and non-CommonJS environment `.entityconvert` will be attached to the global object.
 
 AMD usage like:
 ```javascript
