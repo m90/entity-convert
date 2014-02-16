@@ -11,13 +11,14 @@
 }(this, function(){
 
 	function replacer(mode){
-		return function(char){
-			var index = char.charCodeAt(0);
-			if (index > 127){
-				return mode === 'css' ? ('\\00' + char.charCodeAt(0).toString(16)) : ('&#' + char.charCodeAt(0) + ';');
-			} else {
-				return char;
-			}
+
+		function ent(code){
+			return (mode === 'css' ? ['\\00', code.toString(16)] : ['&#', code, ';']).join('');
+		}
+
+		return function(character){
+			var index = character.charCodeAt(0);
+			return (index > 127) ? ent(index) : character;
 		};
 	}
 
