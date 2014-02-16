@@ -13,7 +13,7 @@ require(['entities'], function(entityconvert){
 
 CommonJS usage like:
 ```javascript
-var entityconvert = require('entityconvert');
+var entityconvert = require('entity-convert');
 var converted = entityconvert.css('We äll löve Ümläutß!');
 // => We \00e4ll l\00f6ve \00dcml\00e4ut\00df!
 ```

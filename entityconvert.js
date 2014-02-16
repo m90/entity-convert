@@ -10,7 +10,6 @@ function replacer(mode){
 }
 
 function replaceBy(mode){
-
 	return function(string){
 		var fn = replacer(mode);
 		string = string.split('');
@@ -19,7 +18,6 @@ function replaceBy(mode){
 		}
 		return string.join('');
 	};
-
 }
 
 (function (root, factory) {
