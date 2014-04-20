@@ -24,4 +24,4 @@ npm install entity-convert --save
 ```
 
 ##License
-MIT © [Frederik Ring](https://github.com/m90)
+MIT © [Frederik Ring](http://www.frederikring.com)
