@@ -4,6 +4,7 @@
   "main": "entityconvert.js",
   "ignore": [
     ".gitignore",
-    "README.md"
+    "README.md",
+    "package.json"
   ]
 }
