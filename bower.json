@@ -1,0 +1,9 @@
+{
+  "name": "entity-convert",
+  "version": "0.0.3",
+  "main": "entityconvert.js",
+  "ignore": [
+    ".gitignore",
+    "README.md"
+  ]
+}
