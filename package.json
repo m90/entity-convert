@@ -5,8 +5,11 @@
   "main": "entityconvert.js",
   "repository": "https://github.com/m90/entity-convert.git",
   "homepage": "https://github.com/m90/entity-convert",
+  "scripts" : {
+    "test" : "node node_modules/mocha/bin/mocha test.js"
+  },
   "bugs": {
-    "url" : "https://github.com/m90/entity-convert/issues"
+    "url": "https://github.com/m90/entity-convert/issues"
   },
   "keywords": [
     "string",
@@ -15,5 +18,8 @@
     "css"
   ],
   "author": "Frederik Ring",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "*"
+  }
 }
