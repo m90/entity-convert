@@ -6,6 +6,7 @@
   "repository": "https://github.com/m90/entity-convert.git",
   "homepage": "https://github.com/m90/entity-convert",
   "scripts" : {
+    "pretest" : "jshint entityconvert.js",
     "test" : "node node_modules/mocha/bin/mocha test.js"
   },
   "bugs": {
