@@ -23,9 +23,17 @@
 	function replacer(mode){
 
 		function getEnt(code){
+
+			// convertedCode string must 
+			// always be 5 characters long
+			var encodeTemplate = '\\u0000',
+				encodeTarget  = code.toString(16),
+				encodeTargetLen = encodeTarget.length,
+				convertedCode = encodeTemplate.slice(0,-encodeTargetLen) + encodeTarget;
+
 			return (
 				mode === 'css' ?
-				['\\00', code.toString(16)] :
+				[convertedCode] :
 				['&#', code, ';']
 			).join('');
 		}
