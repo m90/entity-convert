@@ -25,7 +25,7 @@
 		function getEnt(code){
 			return (
 				mode === 'css' ?
-				['\\00', code.toString(16)] :
+				['\\00', code.toString(16), ' '] :
 				['&#', code, ';']
 			).join('');
 		}
