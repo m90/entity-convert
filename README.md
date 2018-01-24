@@ -15,7 +15,7 @@ CommonJS usage:
 ```javascript
 var entityconvert = require('entity-convert');
 var converted = entityconvert.css('We äll löve Ümläutß!');
-// => We \00e4ll l\00f6ve \00dcml\00e4ut\00df!
+// => We \00e4 ll l\00f6 ve \00dc ml\00e4 ut\00df !
 ```
 
 Script tag usage:
@@ -32,5 +32,5 @@ Available via npm:
 npm install entity-convert --save
 ```
 
-##License
+## License
 MIT © [Frederik Ring](http://www.frederikring.com)
