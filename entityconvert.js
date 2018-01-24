@@ -32,7 +32,7 @@
 
 		return function(character){
 			var index = character.charCodeAt(0);
-			return ( index < 32 || index > 127) ? getEnt(index) : character;
+			return (index < 32 || index > 127) ? getEnt(index) : character;
 		};
 
 	}

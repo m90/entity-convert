@@ -1,14 +1,15 @@
 {
   "name": "entity-convert",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "convert all special characters in a string to their corresponding HTML and CSS entities",
   "main": "entityconvert.js",
   "repository": "https://github.com/m90/entity-convert.git",
   "homepage": "https://github.com/m90/entity-convert",
   "scripts": {
-    "pretest": "node node_modules/jshint/bin/jshint entityconvert.js",
-    "test": "node node_modules/mocha/bin/mocha test.js",
-    "posttest": "node node_modules/uglify-js/bin/uglifyjs entityconvert.js > entityconvert.min.js --mangle"
+    "pretest": "jshint entityconvert.js",
+    "test": "mocha test.js",
+    "build": "uglifyjs entityconvert.js > entityconvert.min.js --mangle",
+    "prepublishOnly": "npm run build"
   },
   "bugs": {
     "url": "https://github.com/m90/entity-convert/issues"
