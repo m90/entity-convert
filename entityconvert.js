@@ -25,14 +25,14 @@
 		function getEnt(code){
 			return (
 				mode === 'css' ?
-				['\\00', code.toString(16)] :
+				['\\00', code.toString(16), ' '] :
 				['&#', code, ';']
 			).join('');
 		}
 
 		return function(character){
 			var index = character.charCodeAt(0);
-			return (index > 127) ? getEnt(index) : character;
+			return ( index < 32 || index > 127) ? getEnt(index) : character;
 		};
 
 	}

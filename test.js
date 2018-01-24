@@ -26,7 +26,7 @@ describe('entityconvert', function(){
 		it('should convert special characters to css entities', function(){
 			assert.equal(
 				ec.css('We äll löve Ümläutß!')
-				, 'We \\00e4ll l\\00f6ve \\00dcml\\00e4ut\\00df!'
+				, 'We \\00e4 ll l\\00f6 ve \\00dc ml\\00e4 ut\\00df !'
 			);
 		});
 		it('should leave latin input untouched', function(){
@@ -38,7 +38,7 @@ describe('entityconvert', function(){
 		it('should leave css selectors untouched', function(){
 			assert.equal(
 				ec.css('p.foo#bar::before{content:\'Ümläut\';}')
-				, 'p.foo#bar::before{content:\'\\00dcml\\00e4ut\';}'
+				, 'p.foo#bar::before{content:\'\\00dc ml\\00e4 ut\';}'
 			);
 		});
 	});
